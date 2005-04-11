@@ -16,7 +16,8 @@ Requires:	kdm >= 9:3.4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This control module allows you to easily add, remove and select any KDM theme you want.
+This control module allows you to easily add, remove and select any
+KDM theme you want.
 
 %description -l pl
 Ten modu³ ustawieñ pozwala na ³atwe zarz±dzanie motywami KDM.
