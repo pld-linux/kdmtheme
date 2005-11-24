@@ -2,7 +2,7 @@ Summary:	KDM Theme Settings Module
 Summary(pl):	Modu³ ustawieñ motywów KDM
 Name:		kdmtheme
 Version:	0.9.1
-Release:	1
+Release:	2
 License:	GPL 
 Group:		Applications
 Source0:	http://smileaf.org/files/kdmtheme/%{name}-%{version}.tar.bz2
@@ -39,7 +39,8 @@ cp -f /usr/share/automake/config.sub admin
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_desktopdir}}
+install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_desktopdir}} \
+	$RPM_BUILD_ROOT%{_datadir}/config/kdm
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
@@ -49,6 +50,9 @@ install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_desktopdir}}
 
 %find_lang %{name} --with-kde
 
+#shortcut to make kdmtheme applet work
+ln -sf %{_sysconfdir}/X11/kdm/kdmrc $RPM_BUILD_ROOT%{_datadir}/config/kdm/kdmrc
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -57,3 +61,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde3/kcm_kdmtheme.so
 %{_libdir}/kde3/kcm_kdmtheme.la
 %{_desktopdir}/kde/kdmtheme.desktop
+%{_datadir}/config/kdm
