@@ -10,7 +10,7 @@ Source0:	http://beta.smileaf.org/files/kdmtheme/%{name}-%{version}.tar.bz2
 URL:		http://www.kde-look.org/content/show.php?content=22120
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	kdelibs-devel >= 9:3.4.0
+BuildRequires:	kdelibs-devel >= 9:3.2.0
 BuildRequires:	rpmbuild(macros) >= 1.129
 Requires:	kdm >= 9:3.4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
