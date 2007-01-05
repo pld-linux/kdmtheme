@@ -27,6 +27,14 @@ Ten modu³ ustawieñ pozwala na ³atwe zarz±dzanie motywami KDM.
 
 %build
 cp -f /usr/share/automake/config.sub admin
+
+mv admin/cvs.sh admin/cvs.sh.bak
+cat admin/cvs.sh.bak | \
+     sed 's:utoconf\*2\.5\*:utoconf*:g' | \
+     sed 's:utoheader\*2\.5\*:utoheader*:g' | \
+     sed 's:automake\*1\.6\.\*:automake*1.*:g' | \
+     > admin/cvs.sh
+
 %{__make} -f admin/Makefile.common cvs
 
 %configure \
