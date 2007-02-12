@@ -1,5 +1,5 @@
 Summary:	KDM Theme Settings Module
-Summary(pl):	Modu≥ ustawieÒ motywÛw KDM
+Summary(pl.UTF-8):   Modu≈Ç ustawie≈Ñ motyw√≥w KDM
 Name:		kdmtheme
 Version:	1.1.2
 Release:	1
@@ -19,8 +19,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This control module allows you to easily add, remove and select any
 KDM theme you want.
 
-%description -l pl
-Ten modu≥ ustawieÒ pozwala na ≥atwe zarz±dzanie motywami KDM.
+%description -l pl.UTF-8
+Ten modu≈Ç ustawie≈Ñ pozwala na ≈Çatwe zarzƒÖdzanie motywami KDM.
  
 %prep
 %setup -q
