@@ -1,5 +1,5 @@
 Summary:	KDM Theme Settings Module
-Summary(pl.UTF-8):   Moduł ustawień motywów KDM
+Summary(pl.UTF-8):	Moduł ustawień motywów KDM
 Name:		kdmtheme
 Version:	1.1.2
 Release:	1
