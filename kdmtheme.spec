@@ -1,12 +1,12 @@
 Summary:	KDM Theme Settings Module
 Summary(pl.UTF-8):	Moduł ustawień motywów KDM
 Name:		kdmtheme
-Version:	1.1.2
+Version:	1.1.3
 Release:	1
 License:	GPL 
 Group:		Applications
 Source0:	http://beta.smileaf.org/files/kdmtheme/%{name}-%{version}.tar.bz2
-# Source0-md5:	40bacda700e847aab7070babc15f67ca
+# Source0-md5:	f49500529652a03701dff03ca54986c4
 URL:		http://www.kde-look.org/content/show.php?content=22120
 BuildRequires:	autoconf
 BuildRequires:	automake
