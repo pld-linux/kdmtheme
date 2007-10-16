@@ -1,12 +1,13 @@
 Summary:	KDM Theme Settings Module
 Summary(pl.UTF-8):	Moduł ustawień motywów KDM
 Name:		kdmtheme
-Version:	1.1.3
+Version:	1.2.1
 Release:	1
-License:	GPL 
+License:	GPL
 Group:		Applications
 Source0:	http://beta.smileaf.org/files/kdmtheme/%{name}-%{version}.tar.bz2
-# Source0-md5:	f49500529652a03701dff03ca54986c4
+# Source0-md5:	42f2df67dc4e15f23d73fae3b8c2106e
+Patch0:		kde-ac260-lt.patch
 URL:		http://www.kde-look.org/content/show.php?content=22120
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -21,19 +22,20 @@ KDM theme you want.
 
 %description -l pl.UTF-8
 Ten moduł ustawień pozwala na łatwe zarządzanie motywami KDM.
- 
+
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 cp -f /usr/share/automake/config.sub admin
 
-mv admin/cvs.sh admin/cvs.sh.bak
-cat admin/cvs.sh.bak | \
-     sed 's:utoconf\*2\.5\*:utoconf*:g' | \
-     sed 's:utoheader\*2\.5\*:utoheader*:g' | \
-     sed 's:automake\*1\.6\.\*:automake*1.*:g' | \
-     > admin/cvs.sh
+# fix for wrong autoconf, autoheader and automake version
+%{__sed} -i \
+	-e 's:autoconf\*2\.5\*:autoconf*:g' \
+	-e 's:autoheader\*2\.5\*:autoheader*:g' \
+	-e 's:automake\*1\.6\.\*:automake*1.*:g' \
+	admin/cvs.sh
 
 %{__make} -f admin/Makefile.common cvs
 
