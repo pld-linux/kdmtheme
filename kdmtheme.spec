@@ -1,12 +1,12 @@
 Summary:	KDM Theme Settings Module
 Summary(pl.UTF-8):	Moduł ustawień motywów KDM
 Name:		kdmtheme
-Version:	1.2.1
+Version:	1.2.2
 Release:	1
 License:	GPL
 Group:		Applications
 Source0:	http://beta.smileaf.org/files/kdmtheme/%{name}-%{version}.tar.bz2
-# Source0-md5:	42f2df67dc4e15f23d73fae3b8c2106e
+# Source0-md5:	292188b0a74b865ec7429077ff5e02b7
 Patch0:		kde-ac260-lt.patch
 URL:		http://www.kde-look.org/content/show.php?content=22120
 BuildRequires:	autoconf
