@@ -25,7 +25,7 @@ Ten moduł ustawień pozwala na łatwe zarządzanie motywami KDM.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 cp -f /usr/share/automake/config.sub admin
